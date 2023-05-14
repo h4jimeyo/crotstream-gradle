@@ -1,0 +1,13 @@
+name: Start Jitpack
+
+# Controls when the workflow will run
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: js6pak/start-jitpack@master
+    env:
+        authToken: ${{ secrets.GH_TOKEN }}
